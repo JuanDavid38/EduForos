@@ -1,18 +1,60 @@
-function Card(){
-    return(
+import React, { useEffect } from 'react';
 
-         
-<div
-  class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-xl md:flex-row">
-  <img
-    class="h-96 w-full rounded-t-lg object-cover md:h-auto md:!rounded-none md:!rounded-l-lg"
-    src="https://tecdn.b-cdn.net/wp-content/uploads/2020/06/vertical.jpg"
-    alt="" />
-  <div class="flex flex-col justify-start p-6">
-    
-  </div>
-</div>
-    );
+function CardContainer() {
+  // Array de objetos que representan las cartas
+  const cardsData = [
+    {
+      imageUrl: "https://via.placeholder.com/300",
+      title: "Card 1",
+      description: "Description for Card 1."
+    },
+    {
+      imageUrl: "https://via.placeholder.com/300",
+      title: "Card 2",
+      description: "Description for Card 2."
+    },
+    {
+      imageUrl: "https://via.placeholder.com/300",
+      title: "Card 3",
+      description: "Description for Card 3."
+    },
+    {
+      imageUrl: "https://via.placeholder.com/300",
+      title: "Card 4",
+      description: "Description for Card 4."
+    },
+    {
+      imageUrl: "https://via.placeholder.com/300",
+      title: "Card 5",
+      description: "Description for Card 5."
+    },
+    {
+      imageUrl: "https://via.placeholder.com/300",
+      title: "Card 6",
+      description: "Description for Card 6."
+    }
+  ];
+
+  useEffect(() => {
+    // Selecciona el contenedor de las cartas
+    const cardContainer = document.getElementById('card-container');
+
+    // Genera el HTML de las cartas dinámicamente
+    for (let i = 0; i < cardsData.length; i++) {
+      const cardData = cardsData[i];
+      const cardHtml = `
+        <div class="card">
+          <img src="${cardData.imageUrl}" alt="${cardData.title}">
+          <h2>${cardData.title}</h2>
+          <p>${cardData.description}</p>
+        </div>
+      `;
+      // Agrega el HTML de la carta al contenedor
+      cardContainer.innerHTML += cardHtml;
+    }
+  }, []); // La dependencia vacía asegura que el efecto solo se ejecute una vez
+
+  return <div id="card-container"></div>;
 }
 
-export default Card;
+export default CardContainer;

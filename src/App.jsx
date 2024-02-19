@@ -7,7 +7,7 @@ import './App.css'
 
 
 import NavBar from './NavBar';
-import Card from './Card';
+
 import Login from './Login';
 
 const App = () => {
@@ -28,17 +28,15 @@ const App = () => {
             EduForos 
           </h1>
           <div class="flex flex gap-5 justifi-center">
-            
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
+          <Login/> 
+          
+          
           </div>
         
         </div>
         
       </div>
-      <Login/>
+    
       
     </>
   )
