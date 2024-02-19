@@ -67,7 +67,7 @@ function Login() {
 
                     <div className="relative">
                         <img
-                            src="https://www.magisnet.com/wp-content/uploads/2020/07/Foros.jpg"
+                            src="../img/tecnologia-5.jpg"
                             alt="img"
                             className="w-[400px] h-full hidden rounded-r-2xl md:block object-cover"
                         />
@@ -78,5 +78,14 @@ function Login() {
 
         </div>
     );
+    Boolean ="btn_iniciar_sesion";
+    btn_iniciar_sesion=flase;
+
+  if(btn_iniciar_sesion==true){
+     return Swal.fire("SweetAlert2 is working!");           
+  }else
+  {
+    return "Error";
+  }
 }
 export default Login;

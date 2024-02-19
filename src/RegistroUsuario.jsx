@@ -133,7 +133,7 @@ function RegistrationUsuario() {
                 data-te-modal-dismiss
                 data-te-ripple-init
                 data-te-ripple-color="light">
-                Cerrar
+                Cancelar
               </button>
               {/* <button
                 type="button"

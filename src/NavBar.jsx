@@ -90,6 +90,7 @@ function NavBar(){
             href="#"
           >
             <span className="[&>svg]:w-5">
+              
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

@@ -121,12 +121,15 @@ function RegistrationCurso() {
                 data-te-ripple-color="light">
                 Understood
               </button> */}
+              
             </div>
           </div>
         </div>
       </div>
     </>
   );
+
+
 }
 
 
